@@ -1,8 +1,20 @@
 import { ArchiveIcon, MessageCircleIcon, ThumbsUpIcon } from "lucide-react";
 import { Section } from "@/components/section";
 import { Card } from "@/components/card";
+import { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Board",
+  description: "Follow de development progress of our entire plataform",
+};
+
+interface BoardProps {
+  searchParams: Promise<{ q?: string }>;
+}
+
+export default async function Board({ searchParams }: BoardProps) {
+  const { q } = await searchParams;
+
   return (
     <div className="max-w-[1620px] w-full mx-auto px-10 flex flex-col h-dvh">
       <div></div>
