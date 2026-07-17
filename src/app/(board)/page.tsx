@@ -3,6 +3,7 @@ import { Section } from "@/components/section";
 import { Card } from "@/components/card";
 import { Metadata } from "next";
 import { listIssues } from "@/http/list-issues";
+import { Button } from "@/components/button";
 
 export const metadata: Metadata = {
   title: "Board",
@@ -53,21 +54,21 @@ export default async function Board({ searchParams }: BoardProps) {
                     </Card.Header>
 
                     <Card.Footer>
-                      <button
+                      <Button
                         type="button"
                         className="text-navy-100 flex items-center gap-2 rounded-lg px-2.5 py-1 bg-navy-600 cursor-pointer"
                       >
                         <ThumbsUpIcon className="size-3" />
                         <span className="text-sm">12</span>
-                      </button>
+                      </Button>
 
-                      <button
+                      <Button
                         type="button"
                         className="text-navy-100 flex items-center gap-2 rounded-lg px-2.5 py-1 bg-navy-600 cursor-pointer"
                       >
                         <MessageCircleIcon className="size-3" />
                         <span className="text-sm">6</span>
-                      </button>
+                      </Button>
                     </Card.Footer>
                   </Card.Root>
                 );
