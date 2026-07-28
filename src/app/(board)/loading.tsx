@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { BoardContent } from "./board-content";
 
 export const metadata: Metadata = {
   title: "Board",
